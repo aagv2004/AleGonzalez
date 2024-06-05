@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./assets/js/firebase.js"></script>
+    <script type="module" src="./assets/js/script.js"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body id="fondo">
+    <h1> Déjame tus datos para contactarte! </h1>
+    <div class="cajaBotones">
+        <button id="btnContraste" type="button"> Contraste </button>
+        <button id="btnFuente" type="button"> Fuentes </button>
+    </div>
+    <form>
+        <label> Nombre </label>
+        <input type="text" id="nombre" placeholder="Nombre">
+
+        <label> Apellido </label>
+        <input type="text" id="apellido" placeholder="Apellido">
+
+        <label> Teléfono </label>
+        <input type="tel" id="telefono" placeholder="912345678">
+        
+        <div class="cajaImportantes">
+            <label>Motivos</label>
+            <select id="motivo">
+                <option value="nada"> </option>
+                <option value="1"> Consultas </option>
+                <option value="2"> Negocios </option>
+                <option value="3"> Sociabilizar </option>
+                <option value="4"> Jugar </option>
+            </select>
+
+            <label> ¿Es importante? </label>
+            <input type="checkbox" id="asuntoImportante">
+
+            <label> ¡Déjame un mensaje! </label>
+            <textarea name="" id="mensaje" cols="50" rows="10"></textarea>
+
+            <button type="button" id="enviar">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Deja cada input debajo de su mensaje */
+input, label, h1, .cajaBotones {
+    text-align: center;
+    display:block;
+}
+
+/* Ajustan la posición */
+textarea {
+    position: relative;
+    margin: 5px;
+    left: 450px;
+}
+label {
+    position: relative;
+    right: 110px;
+}
+input, select {
+    width: 25%;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 485px;
+    bottom: 0;
+}
+.cajaBotones {
+    display: block;
+    margin: 10px;
+    width: 100%;
+}
+.cajaBotones button {
+    margin: 10px
+}
+
+
+
+
+#fondo {
+    background-color: #fff;
+    color: #000;
+}
