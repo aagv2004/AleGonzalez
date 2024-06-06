@@ -9,39 +9,55 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body id="fondo">
-    <h1> Déjame tus datos para contactarte! </h1>
+    <h1> ¡Déjame tus datos para contactarte! </h1>
     <div class="cajaBotones">
         <button id="btnContraste" type="button"> Contraste </button>
         <button id="btnFuente" type="button"> Fuentes </button>
     </div>
     <form>
-        <label> Nombre </label>
-        <input type="text" id="nombre" placeholder="Nombre">
+            <label> Nombre <span class="noDisplay" id="pnombre">* Este campo es obligatorio</span> </label>
+            <input type="text" id="nombre" placeholder="Nombre">
 
-        <label> Apellido </label>
-        <input type="text" id="apellido" placeholder="Apellido">
+            <label> Apellido <span class="noDisplay" id="papellido">* Este campo es obligatorio</span></label>
+            <input type="text" id="apellido" placeholder="Apellido">
 
-        <label> Teléfono </label>
-        <input type="tel" id="telefono" placeholder="912345678">
-        
-        <div class="cajaImportantes">
-            <label>Motivos</label>
-            <select id="motivo">
-                <option value="nada"> </option>
-                <option value="1"> Consultas </option>
-                <option value="2"> Negocios </option>
-                <option value="3"> Sociabilizar </option>
-                <option value="4"> Jugar </option>
-            </select>
+            <label> Teléfono <span class="noDisplay" id="ptelefono">* Este campo es obligatorio</span></label>
+            <input type="tel" id="telefono" placeholder="+569 6191 7708">
 
-            <label> ¿Es importante? </label>
-            <input type="checkbox" id="asuntoImportante">
+            <div class="cajaImportantes">
+                <label>Motivo</label>
+                <select id="motivo">
+                    <option value="nada"> </option>
+                    <option value="1"> Consultas </option>
+                    <option value="2"> Negocios </option>
+                    <option value="3"> Sociabilizar </option>
+                    <option value="4"> Jugar </option>
+                </select>
+                <label class="mImportancia"> Importancia </label>
+                <div class="cajaRadio">
+                    <label class="nada">Nada importante</label>
+                    <input type="radio" id="nadaImportante" name="radio" value="1">
+                    <label class="medio">Mas o menos importante</label>
+                    <input type="radio" id="medioImportante" name="radio" value="2">
+                    <label class="muy">Super importante</label>
+                    <input type="radio" id="muyImportante" name="radio" value="3">
+                </div>
+            </div>
 
-            <label> ¡Déjame un mensaje! </label>
-            <textarea name="" id="mensaje" cols="50" rows="10"></textarea>
+            <label class="socials"> Redes Sociales </label>
+            <label> Nombre usuario en instagram </label>
+            <input type="text" id="instagram" placeholder="nombre de ejemplo">
+            <label> Página web</label>
+            <input type="url" id="paginaweb" placeholder="https://www.google.com">
+            <label> Facebook </label>
+            <input type="text" id="facebook" placeholder="Tu nombre de facebook">
 
-            <button type="button" id="enviar">Enviar</button>
-        </div>
+
+
+            
+                <label class="dejaMensaje"> Asunto breve </label>
+                <textarea name="" id="mensaje" cols="65" rows="10"></textarea>
+                <button type="button" id="btnEnviar">Enviar</button>
     </form>
 </body>
 </html>

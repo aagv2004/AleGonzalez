@@ -1,17 +1,31 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+
 /* Deja cada input debajo de su mensaje */
 input, label, h1, .cajaBotones {
     text-align: center;
-    display:block;
+    display: block;
+}
+
+h1 {
+    position: relative;
+    left: 40px;
 }
 
 /* Ajustan la posición */
 textarea {
+    resize: none;
     position: relative;
     margin: 5px;
-    left: 450px;
+    left: 750px;
+    top: 40px;
 }
 label {
     position: relative;
+    margin: 5px;
     right: 110px;
 }
 input, select {
@@ -19,19 +33,115 @@ input, select {
     position: relative;
     top: 0;
     right: 0;
-    left: 485px;
+    left: 750px;
     bottom: 0;
 }
 .cajaBotones {
-    display: block;
+    display: flex;
     margin: 10px;
     width: 100%;
+    align-items: center;
 }
 .cajaBotones button {
-    margin: 10px
+    margin: 10px;
+    position:relative;
+    left: 750px;
+}
+
+.cajaBotones #btnFuente {
+    position: relative;
+    left: 1000px;
+}
+
+.mImportancia {
+    text-align: center;
+    position: relative;
+    left: 45px;
+    margin: 10px;
+}
+
+#btnEnviar {
+    margin: 30px;
+    margin-bottom: 100px;
+    width: 400px;
+    position: relative;
+    left: 276px;
+    top: 65px;
 }
 
 
+.cajaRadio {
+    width: 100%;
+    display: inline;
+}
+
+.cajaRadio .nada {
+    position: relative;
+    left: 700px;
+}
+
+.cajaRadio .medio {
+    position: relative;
+    left: 760px;
+}
+
+.cajaRadio .muy {
+    position: relative;
+    left: 790px;
+}
+
+.cajaRadio input#nadaImportante {
+    width: auto;
+    position: relative;
+    left: 625px;
+    top: 30px;
+}
+
+.cajaRadio input#medioImportante {
+    width: auto;
+    position: relative;
+    left: 640px;
+    top: 30px;
+}
+
+.cajaRadio input#muyImportante {
+    width: auto;
+    position:relative;
+    left: 715px;
+    top: 30px;
+}
+
+.cajaRadio input[type=radio], .cajaRadio label{
+    /* width: 100%; */
+    display: inline-block;
+    /* left: 580px; */
+}
+
+.dejaMensaje {
+    text-align: center;
+    position:relative;
+    top: 40px;
+}
+
+.socials {
+    margin: 100px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    left: 50px;
+}
+
+
+.noDisplay {
+    display: none;
+    color: #cd6f70;
+    text-align: center;
+}
+
+
+.obligatorio {
+    color: red;
+}
 
 
 #fondo {
