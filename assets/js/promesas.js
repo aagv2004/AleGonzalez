@@ -12,11 +12,11 @@ export const obtenerContacto = async() => {
     const referencia = collection(db, "contactos");
     const querySnapshot = await getDocs(referencia);
     console.log(querySnapshot);
-    let contacto = []
+    let contactos = []
     querySnapshot.forEach((doc) => {
-        contacto.push({...doc.data(), id:doc.id})
+        contactos.push({...doc.data(), id:doc.id})
     });
-    return contacto
+    return contactos
 }
 
 export const actualizarContacto = async(contacto, id) => {

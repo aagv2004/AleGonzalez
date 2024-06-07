@@ -61,7 +61,7 @@ const registrar = () => {
     let vTextarea = eTextarea.value;
 
 
-    let objeto = {
+    let objeto =  {
         nombre:vNombre,
         apellido:vApellido,
         telefono:vTelefono,
@@ -115,7 +115,7 @@ const mostrar = () => {
             document.getElementById("UPDtelefono").value = p.telefono;
             document.getElementById("UPDmensaje").value = p.asunto;
             document.getElementById("btnActualizar").value = p.id;
-            alert("Seleccionaste a:" + p.nombre + " " + p.apellido)
+            alert("Seleccionaste a: " + p.nombre + " " + p.apellido)
         });
         let elementoEliminar = document.getElementById("DEL"+p.id);
         elementoEliminar.addEventListener("click", () => {
@@ -125,7 +125,7 @@ const mostrar = () => {
             document.getElementById("DELtelefono").value = p.telefono;
             document.getElementById("DELmensaje").value = p.asunto;
             document.getElementById("btnEliminar").value = p.id;
-            alert("Vas a eliminar a:" + p.nombre + " " +p.apellido)
+            alert("Vas a eliminar a: " + p.nombre + " " +p.apellido)
         });
     }).catch((e)=>{
         console.log(e)
@@ -276,7 +276,7 @@ function fuente() {
 
 // Llama a las funciones que validan los datos y crea una función de validación que se inicializa en true
 // después se reasignan valores booleanos a esa misma variable para saber si todas las validaciones realmente validaron
-// finalmente se llama al botón de envío para activarlo o desactivarlo "!valido" indica que será lo contrario de la variable valido
+// finalmente se llama al botón de envío para activarlo o desactivarlo. "!valido" indica que será lo contrario de la variable valido
 // es decir si "valido = true", entonces "!valido = false" y viceversa.
 const validar = ()=> {
     let valido = true;
