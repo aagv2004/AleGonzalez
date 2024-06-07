@@ -20,6 +20,7 @@ textarea {
     resize: none;
     position: relative;
     margin: 5px;
+    margin-bottom: 20px;
     left: 750px;
     top: 40px;
 }
@@ -63,9 +64,36 @@ input, select {
 #btnEnviar {
     margin: 30px;
     margin-bottom: 100px;
-    width: 400px;
+    width: 200px;
     position: relative;
-    left: 276px;
+    left: 500px;
+    top: 65px;
+}
+
+#btnActualizar {
+    margin: 30px;
+    margin-bottom: 100px;
+    width: 200px;
+    position: relative;
+    left: 350px;
+    top: 65px
+}
+
+#btnEliminar {
+    margin: 30px;
+    margin-bottom: 100px;
+    width: 200px;
+    position: relative;
+    left: 350px;
+    top: 65px;
+}
+
+#btnValidar {
+    margin: 30px;
+    margin-bottom: 100px;
+    width: 200px;
+    position: relative;
+    left: 0px;
     top: 65px;
 }
 
@@ -147,4 +175,21 @@ input, select {
 #fondo {
     background-color: #fff;
     color: #000;
+}
+
+#longitudtelefono {
+    font-size: 12px;
+}
+
+.tabladatos {
+    position: relative;
+    left: 225px;
+    margin-bottom: 40px;
+}
+
+.tabladatos th, .tabladatos td {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: left;
 }

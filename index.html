@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body id="fondo">
-    <h1> ¡Déjame tus datos para contactarte! </h1>
+
+    <!-- PEDIMOS INFORMACIÓN DE CONTACTO -->
+    <h1> Deje su información de contacto </h1>
     <div class="cajaBotones">
         <button id="btnContraste" type="button"> Contraste </button>
         <button id="btnFuente" type="button"> Fuentes </button>
@@ -22,16 +24,18 @@
             <input type="text" id="apellido" placeholder="Apellido">
 
             <label> Teléfono <span class="noDisplay" id="ptelefono">* Este campo es obligatorio</span></label>
-            <input type="tel" id="telefono" placeholder="+569 6191 7708">
+            <input type="tel" id="telefono" placeholder="+56961917708"  pattern="[0-9]{4}[0-9]{4}[0-9]{4}">
+            <p class="noDisplay" id="longitudtelefono">Intente (+569) y su numero sin espacios, ni guiones</p>
+
 
             <div class="cajaImportantes">
-                <label>Motivo</label>
+                <label>Motivo <span class="noDisplay" id="pmotivo">* Este campo es obligatorio</span></label>
                 <select id="motivo">
-                    <option value="nada"> </option>
-                    <option value="1"> Consultas </option>
-                    <option value="2"> Negocios </option>
-                    <option value="3"> Sociabilizar </option>
-                    <option value="4"> Jugar </option>
+                    <option value="0"> </option>
+                    <option value="consultas"> Consultas </option>
+                    <option value="negocios"> Negocios </option>
+                    <option value="sociabilizar"> Sociabilizar </option>
+                    <option value="jugar"> Jugar </option>
                 </select>
                 <label class="mImportancia"> Importancia </label>
                 <div class="cajaRadio">
@@ -45,19 +49,77 @@
             </div>
 
             <label class="socials"> Redes Sociales </label>
-            <label> Nombre usuario en instagram </label>
+            <label> Instagram (opcional)</label>
             <input type="text" id="instagram" placeholder="nombre de ejemplo">
-            <label> Página web</label>
+            <label> Página web (opcional) </label>
             <input type="url" id="paginaweb" placeholder="https://www.google.com">
-            <label> Facebook </label>
+            <label> Facebook (opcional) </label>
             <input type="text" id="facebook" placeholder="Tu nombre de facebook">
 
 
 
             
-                <label class="dejaMensaje"> Asunto breve </label>
+                <label class="dejaMensaje"> Asunto breve <span class="noDisplay" id="pmensaje">* Este campo es obligatorio</span></label>
                 <textarea name="" id="mensaje" cols="65" rows="10"></textarea>
-                <button type="button" id="btnEnviar">Enviar</button>
+                <button type="button" id="btnEnviar" disabled>Enviar</button>
+                <button type="button" id="btnValidar">Compruebe sus datos</button>
     </form>
+
+    <!-- MOSTRAMOS INFORMACIONES ENTREGADAS DE CONTACTO -->
+    <table class="tabladatos">
+        <thead>
+            <tr>
+                <h1> Dejaron su información de contacto </h1>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Motivo</th>
+                <th>Importancia</th>
+                <th>Instagram</th>
+                <th>Facebook</th>
+                <th>Pagina web</th>
+                <th>Asunto breve</th>
+                <th colspan="2">Botones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+
+        </tbody>
+    </table>
+
+    <!-- SECCIÓN PARA ACTUALIZACIÓN DE DATOS -->
+
+    <h1>Actualice su información de contacto</h1>
+    <label> Nombre </label>
+    <input type="text" id="UPDnombre" placeholder="Nombre" disabled>
+
+    <label> Apellido</label>
+    <input type="text" id="UPDapellido" placeholder="Apellido" disabled>
+
+    <label> Teléfono</label>
+    <input type="tel" id="UPDtelefono" placeholder="+56961917708"  pattern="[0-9]{4}[0-9]{4}[0-9]{4}" disabled>
+    <p class="noDisplay" id="longitudtelefono">Intente (+569) y su numero sin espacios, ni guiones</p>
+    
+    <label class="dejaMensaje"> Asunto breve</label>
+    <textarea name="" id="UPDmensaje" cols="65" rows="5" disabled></textarea>
+    <button type="button" id="btnActualizar">Actualizar</button>
+
+    <h1>Elimine su información de contacto</h1>
+    <label> Nombre </label>
+    <input type="text" id="DELnombre" disabled>
+
+    <label>Apellido</label>
+    <input type="text" id="DELapellido" disabled>
+
+    <label>Telefono</label>
+    <input type="tel" id="DELtelefono" disabled>
+
+    <label class="dejaMensaje">Asunto breve</label>
+    <textarea name="" id="DELmensaje" cols="65" rows="5" disabled></textarea>
+    <button type="button" id="btnEliminar">Eliminar</button>
+
+
 </body>
 </html>
